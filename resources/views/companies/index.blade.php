@@ -1,14 +1,12 @@
 @extends('layouts.app')
 
 @section('main')
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Manage companies
-        </h2>
-    </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
+                <h2 class="text-center font-semibold text-xl text-gray-800 leading-tight">
+                    Manage companies
+                </h2>
                 @if (session('success'))
                     <div class="border-t border-b border-green-600 text-green-600 px-4 py-3 mb-4" role="alert">
                         <p class="font-bold">{{ session('success') }}</p>
@@ -17,7 +15,7 @@
 
                 <a href="{{ route('companies.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create new company</a>
 
-                <table class="table-fixed w-full mt-6" id="table">
+                <table class="table-fixed w-full mt-6" id="datatable">
                     <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">Id</th>
@@ -58,7 +56,7 @@
 @push('scripts')
     <script>
         $(document).ready( function () {
-            $('#table').DataTable({
+            $('#datatable').DataTable({
                 paging: false,
                 bInfo: false
             });

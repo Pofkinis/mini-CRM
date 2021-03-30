@@ -1,4 +1,6 @@
 {
     "/js/app.js": "/js/app.js?id=e6371f592c92d7dbc005",
-    "/css/app.css": "/css/app.css?id=8f944b6ef6f96dcd23cf"
+    "/css/app.css": "/css/app.css?id=2fcabec98e781f5c8452",
+    "/js/dataTables.min.js": "/js/dataTables.min.js?id=2ecadb4a04d1e60e9a8b",
+    "/css/dataTables.min.css": "/css/dataTables.min.css?id=91975297c49a891b0c7e"
 }

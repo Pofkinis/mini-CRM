@@ -17,6 +17,9 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ]);
 
+mix.copy('node_modules/datatables.net/js/jquery.dataTables.min.js', 'public/js/dataTables.min.js');
+mix.copy('node_modules/datatables.net-dt/css/jquery.dataTables.min.css', 'public/css/dataTables.min.css');
+
 if (mix.inProduction()) {
     mix.version();
 }
