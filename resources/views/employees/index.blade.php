@@ -10,12 +10,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
                 @if (session('success'))
-                    <div class="bg-green-500 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3" role="alert">
-                        <div class="flex">
-                            <div>
-                                <p class="text-sm bg-green-500">{{ session('success') }}</p>
-                            </div>
-                        </div>
+                    <div class="border-t border-b border-green-600 text-green-600 px-4 py-3 mb-4" role="alert">
+                        <p class="font-bold">{{ session('success') }}</p>
                     </div>
                 @endif
 
@@ -60,7 +56,6 @@
             </div>
         </div>
     </div>
-
 
 @endsection
 
