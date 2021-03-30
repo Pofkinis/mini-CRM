@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
-use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
@@ -24,7 +23,7 @@ class CompanyController extends Controller
         if($request->logo){
             $companyLogo = $request->logo->store('companies');
         }
-        $company = Company::create([
+        Company::create([
             'name' => $request->name,
             'email' => $request->email,
             'website' => $request->website,
@@ -43,7 +42,7 @@ class CompanyController extends Controller
         if($request->logo){
             $companyLogo = $request->logo->store('companies');
         }
-        $company = Company::create([
+        $company->update([
             'name' => $request->name,
             'email' => $request->email,
             'website' => $request->website,
