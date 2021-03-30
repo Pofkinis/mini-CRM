@@ -39,7 +39,7 @@
                             </td>
                             <td class="border px-4 py-2">{{ $company->name }}</td>
                             <td class="border px-4 py-2">{{ $company->email }}</td>
-                            <td class="border px-4 py-2">{{ $company->website }}</td>
+                            <td class="border px-4 py-2"><a href="http:\\{{ $company->website }}" target="_blank">{{ $company->website }} </a></td>
                             <td class="border px-4 py-2 flex fex-row">
                                 <a href="{{ route('companies.edit', $company) }}" class="bg-blue-500 mr-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
                                 <form method="POST" action="{{ route('companies.destroy', $company) }}">
