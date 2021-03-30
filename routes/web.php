@@ -15,20 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 Route::group([
     'middleware' => [
         'auth:sanctum',
         'verified'
     ],
 ], function () {
-    Route::get('dashboard', function (){
+    Route::get('/', function (){
        return view('dashboard');
     })->name('dashboard');
+
     Route::resource('companies', CompanyController::class);
     Route::resource('employees', EmployeeController::class);
 });
