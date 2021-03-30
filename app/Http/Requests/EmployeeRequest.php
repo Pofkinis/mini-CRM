@@ -28,7 +28,7 @@ class EmployeeRequest extends FormRequest
             'last_name' => 'required|max:255',
             'company_id' => 'nullable|exists:companies,id',
             'email' => 'nullable|email|max:255',
-            'phone' => 'nullable|digits:9',
+            'phone' => 'nullable|max:12|regex:/^([0-9\s\-\+\(\)]*)$/|',
         ];
     }
 }
