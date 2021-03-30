@@ -1,4 +1,6 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('main')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Create company
@@ -48,4 +50,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection

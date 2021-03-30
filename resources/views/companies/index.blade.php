@@ -1,4 +1,6 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('main')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Manage companies
@@ -19,7 +21,7 @@
 
                 <a href="{{ route('companies.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create new company</a>
 
-                <table class="table-fixed w-full mt-6">
+                <table class="table-fixed w-full mt-6" id="table">
                     <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">Id</th>
@@ -55,4 +57,15 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
+
+@push('scripts')
+    <script>
+        $(document).ready( function () {
+            $('#table').DataTable({
+                paging: false,
+                bInfo: false
+            });
+        } );
+    </script>
+@endpush
